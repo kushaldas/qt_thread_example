@@ -36,7 +36,7 @@ class ExampleApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def git_clone(self):
         self.git_thread.git_url = self.lineEdit.text()
         self.pushButton.setEnabled(False)
-        self.lineEdit.setText("Started git clone operation.")
+        self.textEdit.setText("Started git clone operation.")
         self.git_thread.start()
 
     def finished(self, result):
