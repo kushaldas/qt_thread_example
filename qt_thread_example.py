@@ -29,6 +29,7 @@ class ExampleApp(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super(ExampleApp, self).__init__(parent)
         self.setupUi(self)
+        self.pushButton.setText("Git clone with Thread")
         self.pushButton.clicked.connect(self.git_clone)
         self.git_thread = CloneThread()
         self.git_thread.signal.connect(self.finished)
